@@ -84,28 +84,22 @@
 
 
 
-<meta name="description" content="##创建模式
-###抽象工厂模式
-抽象工厂模式提供了一个协议来生成一系列的相关或者独立的对象，而不用指定具体对象的类型。它使得应用程序能够和使用的框架的具体实现进行解耦。这在JDK或者许多框架比如Spring中都随处可见。它们也很容易识别，一个创建新对象的方法，返回的却是接口或者抽象类的，就是抽象工厂模式了。
+<meta name="description" content="创建模式抽象工厂模式抽象工厂模式提供了一个协议来生成一系列的相关或者独立的对象，而不用指定具体对象的类型。它使得应用程序能够和使用的框架的具体实现进行解耦。这在JDK或者许多框架比如Spring中都随处可见。它们也很容易识别，一个创建新对象的方法，返回的却是接口或者抽象类的，就是抽象工厂模式了。
 java.util.Calendar#getInstance()
-java.util.A">
+java.util.Arrays#a">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JDK中的设计模式">
 <meta property="og:url" content="http://yoursite.com/2017/03/09/JDK中的设计模式/index.html">
 <meta property="og:site_name" content="Chenyuze's Blog">
-<meta property="og:description" content="##创建模式
-###抽象工厂模式
-抽象工厂模式提供了一个协议来生成一系列的相关或者独立的对象，而不用指定具体对象的类型。它使得应用程序能够和使用的框架的具体实现进行解耦。这在JDK或者许多框架比如Spring中都随处可见。它们也很容易识别，一个创建新对象的方法，返回的却是接口或者抽象类的，就是抽象工厂模式了。
+<meta property="og:description" content="创建模式抽象工厂模式抽象工厂模式提供了一个协议来生成一系列的相关或者独立的对象，而不用指定具体对象的类型。它使得应用程序能够和使用的框架的具体实现进行解耦。这在JDK或者许多框架比如Spring中都随处可见。它们也很容易识别，一个创建新对象的方法，返回的却是接口或者抽象类的，就是抽象工厂模式了。
 java.util.Calendar#getInstance()
-java.util.A">
-<meta property="og:updated_time" content="2017-03-09T10:16:08.682Z">
+java.util.Arrays#a">
+<meta property="og:updated_time" content="2017-03-09T10:18:07.316Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JDK中的设计模式">
-<meta name="twitter:description" content="##创建模式
-###抽象工厂模式
-抽象工厂模式提供了一个协议来生成一系列的相关或者独立的对象，而不用指定具体对象的类型。它使得应用程序能够和使用的框架的具体实现进行解耦。这在JDK或者许多框架比如Spring中都随处可见。它们也很容易识别，一个创建新对象的方法，返回的却是接口或者抽象类的，就是抽象工厂模式了。
+<meta name="twitter:description" content="创建模式抽象工厂模式抽象工厂模式提供了一个协议来生成一系列的相关或者独立的对象，而不用指定具体对象的类型。它使得应用程序能够和使用的框架的具体实现进行解耦。这在JDK或者许多框架比如Spring中都随处可见。它们也很容易识别，一个创建新对象的方法，返回的却是接口或者抽象类的，就是抽象工厂模式了。
 java.util.Calendar#getInstance()
-java.util.A">
+java.util.Arrays#a">
 
 
 
@@ -374,9 +368,7 @@ java.util.A">
       
 
       
-        <p>##<strong>创建模式</strong></p>
-<p>###抽象工厂模式</p>
-<p>抽象工厂模式提供了一个协议来生成一系列的相关或者独立的对象，而不用指定具体对象的类型。它使得应用程序能够和使用的框架的具体实现进行解耦。这在JDK或者许多框架比如Spring中都随处可见。它们也很容易识别，一个创建新对象的方法，返回的却是接口或者抽象类的，就是抽象工厂模式了。</p>
+        <h2 id="创建模式"><a href="#创建模式" class="headerlink" title="创建模式"></a><strong>创建模式</strong></h2><h3 id="抽象工厂模式"><a href="#抽象工厂模式" class="headerlink" title="抽象工厂模式"></a>抽象工厂模式</h3><p>抽象工厂模式提供了一个协议来生成一系列的相关或者独立的对象，而不用指定具体对象的类型。它使得应用程序能够和使用的框架的具体实现进行解耦。这在JDK或者许多框架比如Spring中都随处可见。它们也很容易识别，一个创建新对象的方法，返回的却是接口或者抽象类的，就是抽象工厂模式了。</p>
 <pre><code>java.util.Calendar#getInstance()
 java.util.Arrays#asList()
 java.util.ResourceBundle#getBundle()
@@ -385,14 +377,12 @@ java.sql.Connection#createStatement()
 java.sql.Statement#executeQuery()
 java.text.NumberFormat#getInstance()
 javax.xml.transform.TransformerFactory#newInstance()
-</code></pre><p>###建造模式(Builder)</p>
-<p>定义了一个新的类来构建另一个类的实例，以简化复杂对象的创建。建造模式通常也使用方法链接来实现。</p>
+</code></pre><h3 id="建造模式-Builder"><a href="#建造模式-Builder" class="headerlink" title="建造模式(Builder)"></a>建造模式(Builder)</h3><p>定义了一个新的类来构建另一个类的实例，以简化复杂对象的创建。建造模式通常也使用方法链接来实现。</p>
 <pre><code>java.lang.StringBuilder#append()
 java.lang.StringBuffer#append()
 java.sql.PreparedStatement
 javax.swing.GroupLayout.Group#addComponent()
-</code></pre><p>###工厂方法</p>
-<p>就是一个返回具体对象的方法。</p>
+</code></pre><h3 id="工厂方法"><a href="#工厂方法" class="headerlink" title="工厂方法"></a>工厂方法</h3><p>就是一个返回具体对象的方法。</p>
 <pre><code>java.lang.Proxy#newProxyInstance()
 java.lang.Object#toString()
 java.lang.Class#newInstance()
@@ -400,113 +390,90 @@ java.lang.reflect.Array#newInstance()
 java.lang.reflect.Constructor#newInstance()
 java.lang.Boolean#valueOf(String)
 java.lang.Class#forName()
-</code></pre><p>###原型模式</p>
-<p>使得类的实例能够生成自身的拷贝。如果创建一个对象的实例非常复杂且耗时时，就可以使用这种模式，而不重新创建一个新的实例，你可以拷贝一个对象并直接修改它。</p>
+</code></pre><h3 id="原型模式"><a href="#原型模式" class="headerlink" title="原型模式"></a>原型模式</h3><p>使得类的实例能够生成自身的拷贝。如果创建一个对象的实例非常复杂且耗时时，就可以使用这种模式，而不重新创建一个新的实例，你可以拷贝一个对象并直接修改它。</p>
 <pre><code>java.lang.Object#clone()
 java.lang.Cloneable
-</code></pre><p>###单例模式</p>
-<p>用来确保类只有一个实例。Joshua Bloch在Effetive Java中建议到，还有一种方法就是使用枚举。</p>
+</code></pre><h3 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h3><p>用来确保类只有一个实例。Joshua Bloch在Effetive Java中建议到，还有一种方法就是使用枚举。</p>
 <pre><code>java.lang.Runtime#getRuntime()
 java.awt.Toolkit#getDefaultToolkit()
 java.awt.GraphicsEnvironment#getLocalGraphicsEnvironment()
 java.awt.Desktop#getDesktop()
-</code></pre><p>##<strong>结构型模式</strong></p>
-<p>###适配器模式</p>
-<p>用来把一个接口转化成另一个接口。</p>
+</code></pre><h2 id="结构型模式"><a href="#结构型模式" class="headerlink" title="结构型模式"></a><strong>结构型模式</strong></h2><h3 id="适配器模式"><a href="#适配器模式" class="headerlink" title="适配器模式"></a>适配器模式</h3><p>用来把一个接口转化成另一个接口。</p>
 <pre><code>java.util.Arrays#asList()
 javax.swing.JTable(TableModel)
 java.io.InputStreamReader(InputStream)
 java.io.OutputStreamWriter(OutputStream)
 javax.xml.bind.annotation.adapters.XmlAdapter#marshal()
 javax.xml.bind.annotation.adapters.XmlAdapter#unmarshal()
-</code></pre><p>###桥接模式</p>
-<p>这个模式将抽象和抽象操作的实现进行了解耦，这样使得抽象和实现可以独立地变化。</p>
+</code></pre><h3 id="桥接模式"><a href="#桥接模式" class="headerlink" title="桥接模式"></a>桥接模式</h3><p>这个模式将抽象和抽象操作的实现进行了解耦，这样使得抽象和实现可以独立地变化。</p>
 <pre><code>AWT 
 JDBC
-</code></pre><p>###组合模式</p>
-<p>使得客户端看来单个对象和对象的组合是同等的。换句话说，某个类型的方法同时也接受自身类型作为参数。</p>
+</code></pre><h3 id="组合模式"><a href="#组合模式" class="headerlink" title="组合模式"></a>组合模式</h3><p>使得客户端看来单个对象和对象的组合是同等的。换句话说，某个类型的方法同时也接受自身类型作为参数。</p>
 <pre><code>javax.swing.JComponent#add(Component)
 java.awt.Container#add(Component)
 java.util.Map#putAll(Map)
 java.util.List#addAll(Collection)
 java.util.Set#addAll(Collection)
-</code></pre><p>###装饰者模式</p>
-<p>动态的给一个对象附加额外的功能，这也是子类的一种替代方式。可以看到，在创建一个类型的时候，同时也传入同一类型的对象。这在JDK里随处可见，你会发现它无处不在，所以下面这个列表只是一小部分。</p>
+</code></pre><h3 id="装饰者模式"><a href="#装饰者模式" class="headerlink" title="装饰者模式"></a>装饰者模式</h3><p>动态的给一个对象附加额外的功能，这也是子类的一种替代方式。可以看到，在创建一个类型的时候，同时也传入同一类型的对象。这在JDK里随处可见，你会发现它无处不在，所以下面这个列表只是一小部分。</p>
 <pre><code>java.io.BufferedInputStream(InputStream)
 java.io.DataInputStream(InputStream)
 java.io.BufferedOutputStream(OutputStream)
 java.util.zip.ZipOutputStream(OutputStream)
 java.util.Collections#checkedList|Map|Set|SortedSet|SortedMap
-</code></pre><p>###门面模式</p>
-<p>给一组组件，接口，抽象，或者子系统提供一个简单的接口。</p>
+</code></pre><h3 id="门面模式"><a href="#门面模式" class="headerlink" title="门面模式"></a>门面模式</h3><p>给一组组件，接口，抽象，或者子系统提供一个简单的接口。</p>
 <pre><code>java.lang.Class
 javax.faces.webapp.FacesServlet
-</code></pre><p>###享元模式</p>
-<p>使用缓存来加速大量小对象的访问时间。</p>
+</code></pre><h3 id="享元模式"><a href="#享元模式" class="headerlink" title="享元模式"></a>享元模式</h3><p>使用缓存来加速大量小对象的访问时间。</p>
 <pre><code>java.lang.Integer#valueOf(int)
 java.lang.Boolean#valueOf(boolean)
 java.lang.Byte#valueOf(byte)
 java.lang.Character#valueOf(char)
-</code></pre><p>###代理模式</p>
-<p>代理模式是用一个简单的对象来代替一个复杂的或者创建耗时的对象。</p>
+</code></pre><h3 id="代理模式"><a href="#代理模式" class="headerlink" title="代理模式"></a>代理模式</h3><p>代理模式是用一个简单的对象来代替一个复杂的或者创建耗时的对象。</p>
 <pre><code>java.lang.reflect.Proxy
 RMI
-</code></pre><p>##<strong>行为模式</strong></p>
-<p>###责任链模式</p>
-<p>通过把请求从一个对象传递到链条中下一个对象的方式，直到请求被处理完毕，以实现对象间的解耦。</p>
+</code></pre><h2 id="行为模式"><a href="#行为模式" class="headerlink" title="行为模式"></a><strong>行为模式</strong></h2><h3 id="责任链模式"><a href="#责任链模式" class="headerlink" title="责任链模式"></a>责任链模式</h3><p>通过把请求从一个对象传递到链条中下一个对象的方式，直到请求被处理完毕，以实现对象间的解耦。</p>
 <pre><code>java.util.logging.Logger#log()
 javax.servlet.Filter#doFilter()
-</code></pre><p>###命令模式</p>
-<p>将操作封装到对象内，以便存储，传递和返回。</p>
+</code></pre><h3 id="命令模式"><a href="#命令模式" class="headerlink" title="命令模式"></a>命令模式</h3><p>将操作封装到对象内，以便存储，传递和返回。</p>
 <pre><code>java.lang.Runnable
 javax.swing.Action
-</code></pre><p>###解释器模式</p>
-<p>这个模式通常定义了一个语言的语法，然后解析相应语法的语句。</p>
+</code></pre><h3 id="解释器模式"><a href="#解释器模式" class="headerlink" title="解释器模式"></a>解释器模式</h3><p>这个模式通常定义了一个语言的语法，然后解析相应语法的语句。</p>
 <pre><code>java.util.Pattern
 java.text.Normalizer
 java.text.Format
-</code></pre><p>###迭代器模式</p>
-<p>提供一个一致的方法来顺序访问集合中的对象，这个方法与底层的集合的具体实现无关。</p>
+</code></pre><h3 id="迭代器模式"><a href="#迭代器模式" class="headerlink" title="迭代器模式"></a>迭代器模式</h3><p>提供一个一致的方法来顺序访问集合中的对象，这个方法与底层的集合的具体实现无关。</p>
 <pre><code>java.util.Iterator
 java.util.Enumeration
-</code></pre><p>###中介者模式</p>
-<p>通过使用一个中间对象来进行消息分发以及减少类之间的直接依赖。</p>
+</code></pre><h3 id="中介者模式"><a href="#中介者模式" class="headerlink" title="中介者模式"></a>中介者模式</h3><p>通过使用一个中间对象来进行消息分发以及减少类之间的直接依赖。</p>
 <pre><code>java.util.Timer
 java.util.concurrent.Executor#execute()
 java.util.concurrent.ExecutorService#submit()
 java.lang.reflect.Method#invoke()
-</code></pre><p>###备忘录模式</p>
-<p>生成对象状态的一个快照，以便对象可以恢复原始状态而不用暴露自身的内容。Date对象通过自身内部的一个long值来实现备忘录模式。</p>
+</code></pre><h3 id="备忘录模式"><a href="#备忘录模式" class="headerlink" title="备忘录模式"></a>备忘录模式</h3><p>生成对象状态的一个快照，以便对象可以恢复原始状态而不用暴露自身的内容。Date对象通过自身内部的一个long值来实现备忘录模式。</p>
 <pre><code>java.util.Date
 java.io.Serializable
-</code></pre><p>###空对象模式</p>
-<p>这个模式通过一个无意义的对象来代替没有对象这个状态。它使得你不用额外对空对象进行处理。</p>
+</code></pre><h3 id="空对象模式"><a href="#空对象模式" class="headerlink" title="空对象模式"></a>空对象模式</h3><p>这个模式通过一个无意义的对象来代替没有对象这个状态。它使得你不用额外对空对象进行处理。</p>
 <pre><code>java.util.Collections#emptyList()
 java.util.Collections#emptyMap()
 java.util.Collections#emptySet()
-</code></pre><p>###观察者模式</p>
-<p>它使得一个对象可以灵活的将消息发送给感兴趣的对象。</p>
+</code></pre><h3 id="观察者模式"><a href="#观察者模式" class="headerlink" title="观察者模式"></a>观察者模式</h3><p>它使得一个对象可以灵活的将消息发送给感兴趣的对象。</p>
 <pre><code>java.util.EventListener
 javax.servlet.http.HttpSessionBindingListener
 javax.servlet.http.HttpSessionAttributeListener
 javax.faces.event.PhaseListener
-</code></pre><p>###状态模式</p>
-<p>通过改变对象内部的状态，使得你可以在运行时动态改变一个对象的行为。</p>
+</code></pre><h3 id="状态模式"><a href="#状态模式" class="headerlink" title="状态模式"></a>状态模式</h3><p>通过改变对象内部的状态，使得你可以在运行时动态改变一个对象的行为。</p>
 <pre><code>java.util.Iterator
 javax.faces.lifecycle.LifeCycle#execute()
-</code></pre><p>###策略模式</p>
-<p>使用这个模式来将一组算法封装成一系列对象。通过传递这些对象可以灵活的改变程序的功能。</p>
+</code></pre><h3 id="策略模式"><a href="#策略模式" class="headerlink" title="策略模式"></a>策略模式</h3><p>使用这个模式来将一组算法封装成一系列对象。通过传递这些对象可以灵活的改变程序的功能。</p>
 <pre><code>java.util.Comparator#compare()
 javax.servlet.http.HttpServlet
 javax.servlet.Filter#doFilter()
-</code></pre><p>###模板方法模式</p>
-<p>让子类可以重写方法的一部分，而不是整个重写，你可以控制子类需要重写那些操作。</p>
+</code></pre><h3 id="模板方法模式"><a href="#模板方法模式" class="headerlink" title="模板方法模式"></a>模板方法模式</h3><p>让子类可以重写方法的一部分，而不是整个重写，你可以控制子类需要重写那些操作。</p>
 <pre><code>java.util.Collections#sort()
 java.io.InputStream#skip()
 java.io.InputStream#read()
 java.util.AbstractList#indexOf()
-</code></pre><p>###访问者模式</p>
-<p>提供一个方便的可维护的方式来操作一组对象。它使得你在不改变操作的对象前提下，可以修改或者扩展对象的行为。</p>
+</code></pre><h3 id="访问者模式"><a href="#访问者模式" class="headerlink" title="访问者模式"></a>访问者模式</h3><p>提供一个方便的可维护的方式来操作一组对象。它使得你在不改变操作的对象前提下，可以修改或者扩展对象的行为。</p>
 <pre><code>javax.lang.model.element.Element 
 javax.lang.model.element.ElementVisitor
 javax.lang.model.type.TypeMirror                                     
@@ -734,7 +701,7 @@ javax.lang.model.type.TypeVisitor
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建模式"><span class="nav-number">1.</span> <span class="nav-text">创建模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#抽象工厂模式"><span class="nav-number">1.1.</span> <span class="nav-text">抽象工厂模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#建造模式-Builder"><span class="nav-number">1.2.</span> <span class="nav-text">建造模式(Builder)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#工厂方法"><span class="nav-number">1.3.</span> <span class="nav-text">工厂方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#原型模式"><span class="nav-number">1.4.</span> <span class="nav-text">原型模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#单例模式"><span class="nav-number">1.5.</span> <span class="nav-text">单例模式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结构型模式"><span class="nav-number">2.</span> <span class="nav-text">结构型模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#适配器模式"><span class="nav-number">2.1.</span> <span class="nav-text">适配器模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#桥接模式"><span class="nav-number">2.2.</span> <span class="nav-text">桥接模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#组合模式"><span class="nav-number">2.3.</span> <span class="nav-text">组合模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#装饰者模式"><span class="nav-number">2.4.</span> <span class="nav-text">装饰者模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#门面模式"><span class="nav-number">2.5.</span> <span class="nav-text">门面模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#享元模式"><span class="nav-number">2.6.</span> <span class="nav-text">享元模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代理模式"><span class="nav-number">2.7.</span> <span class="nav-text">代理模式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#行为模式"><span class="nav-number">3.</span> <span class="nav-text">行为模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#责任链模式"><span class="nav-number">3.1.</span> <span class="nav-text">责任链模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#命令模式"><span class="nav-number">3.2.</span> <span class="nav-text">命令模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解释器模式"><span class="nav-number">3.3.</span> <span class="nav-text">解释器模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#迭代器模式"><span class="nav-number">3.4.</span> <span class="nav-text">迭代器模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#中介者模式"><span class="nav-number">3.5.</span> <span class="nav-text">中介者模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#备忘录模式"><span class="nav-number">3.6.</span> <span class="nav-text">备忘录模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#空对象模式"><span class="nav-number">3.7.</span> <span class="nav-text">空对象模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#观察者模式"><span class="nav-number">3.8.</span> <span class="nav-text">观察者模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#状态模式"><span class="nav-number">3.9.</span> <span class="nav-text">状态模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#策略模式"><span class="nav-number">3.10.</span> <span class="nav-text">策略模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模板方法模式"><span class="nav-number">3.11.</span> <span class="nav-text">模板方法模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#访问者模式"><span class="nav-number">3.12.</span> <span class="nav-text">访问者模式</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
