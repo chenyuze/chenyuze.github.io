@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="计划," />
+  <meta name="keywords" content="数据库,事务,隔离," />
 
 
 
@@ -84,16 +84,19 @@
 
 
 
-<meta name="description" content="&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;时间如白驹过隙，转眼便是大四狗，感慨颇多。大三下的找实习，投简历、跑招聘会、忙忙碌碌地往返于学校和天府软件园间，刷笔试，做项目。暑假实习租房子，跟项目，看书，敲代码。大四上校招季，边实习边进行校招，拿了几个offer。直到11月，感情告吹，决定离开成都，签了深圳的offer，结束实习。想好好待学校多看点书，毕竟无颜就该多读书。&amp;ensp;&amp;ensp;">
+<meta name="description" content="定义在数据库操作中，为了有效保证并发读取数据的正确性，提出的事务隔离级别。数据库事务的隔离级别有4个，由低到高依次为Read uncommitted(未授权读取、读未提交)、Read committed（授权读取、读提交）、Repeatable read（可重复读取）、Serializable（序列化），这四个级别可以逐个解决脏读、不可重复读、幻读这几类问题。
+之所以提出事务隔离级别，是因为在一个">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2017新年展望">
-<meta property="og:url" content="http://yoursite.com/2017/01/01/2017展望/index.html">
+<meta property="og:title" content="数据库事务四种隔离级别">
+<meta property="og:url" content="http://yoursite.com/2017/03/11/数据库事务四种隔离级别/index.html">
 <meta property="og:site_name" content="Chenyuze's Blog">
-<meta property="og:description" content="&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;时间如白驹过隙，转眼便是大四狗，感慨颇多。大三下的找实习，投简历、跑招聘会、忙忙碌碌地往返于学校和天府软件园间，刷笔试，做项目。暑假实习租房子，跟项目，看书，敲代码。大四上校招季，边实习边进行校招，拿了几个offer。直到11月，感情告吹，决定离开成都，签了深圳的offer，结束实习。想好好待学校多看点书，毕竟无颜就该多读书。&amp;ensp;&amp;ensp;">
-<meta property="og:updated_time" content="2016-12-31T18:45:44.963Z">
+<meta property="og:description" content="定义在数据库操作中，为了有效保证并发读取数据的正确性，提出的事务隔离级别。数据库事务的隔离级别有4个，由低到高依次为Read uncommitted(未授权读取、读未提交)、Read committed（授权读取、读提交）、Repeatable read（可重复读取）、Serializable（序列化），这四个级别可以逐个解决脏读、不可重复读、幻读这几类问题。
+之所以提出事务隔离级别，是因为在一个">
+<meta property="og:updated_time" content="2017-03-11T15:12:30.072Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="2017新年展望">
-<meta name="twitter:description" content="&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;时间如白驹过隙，转眼便是大四狗，感慨颇多。大三下的找实习，投简历、跑招聘会、忙忙碌碌地往返于学校和天府软件园间，刷笔试，做项目。暑假实习租房子，跟项目，看书，敲代码。大四上校招季，边实习边进行校招，拿了几个offer。直到11月，感情告吹，决定离开成都，签了深圳的offer，结束实习。想好好待学校多看点书，毕竟无颜就该多读书。&amp;ensp;&amp;ensp;">
+<meta name="twitter:title" content="数据库事务四种隔离级别">
+<meta name="twitter:description" content="定义在数据库操作中，为了有效保证并发读取数据的正确性，提出的事务隔离级别。数据库事务的隔离级别有4个，由低到高依次为Read uncommitted(未授权读取、读未提交)、Read committed（授权读取、读提交）、Repeatable read（可重复读取）、Serializable（序列化），这四个级别可以逐个解决脏读、不可重复读、幻读这几类问题。
+之所以提出事务隔离级别，是因为在一个">
 
 
 
@@ -114,9 +117,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/01/01/2017展望/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/03/11/数据库事务四种隔离级别/"/>
 
-  <title> 2017新年展望 | Chenyuze's Blog </title>
+  <title> 数据库事务四种隔离级别 | Chenyuze's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -296,7 +299,7 @@
             
             
               
-                2017新年展望
+                数据库事务四种隔离级别
               
             
           </h1>
@@ -308,8 +311,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-01-01T01:55:51+08:00" content="2017-01-01">
-              2017-01-01
+            <time itemprop="dateCreated" datetime="2017-03-11T23:02:59+08:00" content="2017-03-11">
+              2017-03-11
             </time>
           </span>
 
@@ -322,8 +325,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/扯/" itemprop="url" rel="index">
-                    <span itemprop="name">扯</span>
+                  <a href="/categories/数据库/" itemprop="url" rel="index">
+                    <span itemprop="name">数据库</span>
                   </a>
                 </span>
 
@@ -338,8 +341,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/01/01/2017展望/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/01/2017展望/" itemprop="commentsCount"></span>
+                <a href="/2017/03/11/数据库事务四种隔离级别/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/11/数据库事务四种隔离级别/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -362,10 +365,22 @@
       
 
       
-        <p>&ensp;&ensp;&ensp;&ensp;时间如白驹过隙，转眼便是大四狗，感慨颇多。大三下的找实习，投简历、跑招聘会、忙忙碌碌地往返于学校和天府软件园间，刷笔试，做项目。暑假实习租房子，跟项目，看书，敲代码。大四上校招季，边实习边进行校招，拿了几个offer。直到11月，感情告吹，决定离开成都，签了深圳的offer，结束实习。想好好待学校多看点书，毕竟无颜就该多读书。<br>&ensp;&ensp;&ensp;&ensp;新的一年，希望早点完成毕设，多学点技术，顺利毕业。下半年就是社会青年了，既期待又有些迷惘。祝好，2017。</p>
-<blockquote>
-<p>“让所有人都满足的选择是没有的，对自己的选择负责吧。”<br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; ——《未生》</p>
-</blockquote>
+        <h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>在数据库操作中，为了有效保证并发读取数据的正确性，提出的事务隔离级别。<br>数据库事务的隔离级别有4个，由低到高依次为Read uncommitted(未授权读取、读未提交)、Read committed（授权读取、读提交）、Repeatable read（可重复读取）、Serializable（序列化），这四个级别可以逐个解决脏读、不可重复读、幻读这几类问题。</p>
+<p>之所以提出事务隔离级别，是因为在一个事务执行过程中，可能会出现以下几种情况</p>
+<h2 id="异常情况"><a href="#异常情况" class="headerlink" title="异常情况"></a>异常情况</h2><h3 id="更新丢失"><a href="#更新丢失" class="headerlink" title="更新丢失"></a>更新丢失</h3><p>两个事务都同时更新一行数据，一个事务对数据的更新把另一个事务对数据的更新覆盖了。这是因为系统没有执行任何的锁操作，因此并发事务并没有被隔离开来。</p>
+<h3 id="脏读"><a href="#脏读" class="headerlink" title="脏读"></a>脏读</h3><p>一个事务读取到了另一个事务未提交的数据操作结果。</p>
+<h3 id="不可重复读（Non-repeatable-Reads）：一个事务对同一行数据重复读取两次，但是却得到了不同的结果。"><a href="#不可重复读（Non-repeatable-Reads）：一个事务对同一行数据重复读取两次，但是却得到了不同的结果。" class="headerlink" title="不可重复读（Non-repeatable Reads）：一个事务对同一行数据重复读取两次，但是却得到了不同的结果。"></a>不可重复读（Non-repeatable Reads）：一个事务对同一行数据重复读取两次，但是却得到了不同的结果。</h3><p>包括以下情况：</p>
+<ul>
+<li>虚读：事务T1读取某一数据后，事务T2对其做了修改，当事务T1再次读该数据时得到与前一次不同的值。</li>
+<li>幻读（Phantom Reads）：事务在操作过程中进行两次查询，第二次查询的结果包含了第一次查询中未出现的数据或者缺少了第一次查询中出现的数据（这里并不要求两次查询的SQL语句相同）。这是因为在两次查询过程中有另外一个事务插入数据造成的。</li>
+</ul>
+<p>下面介绍一下这几种事务隔离级别的区别以及可能出现的问题：</p>
+<h2 id="隔离级别"><a href="#隔离级别" class="headerlink" title="隔离级别"></a>隔离级别</h2><h3 id="Read-uncommitted-未授权读取、读未提交-："><a href="#Read-uncommitted-未授权读取、读未提交-：" class="headerlink" title="Read uncommitted(未授权读取、读未提交)："></a>Read uncommitted(未授权读取、读未提交)：</h3><p>如果一个事务已经开始写数据，则另外一个事务则不允许同时进行写操作，但允许其他事务读此行数据。该隔离级别可以通过“排他写锁”实现。<br>避免了更新丢失，却可能出现脏读。也就是说事务B读取到了事务A未提交的数据。</p>
+<h3 id="Read-committed（授权读取、读提交）："><a href="#Read-committed（授权读取、读提交）：" class="headerlink" title="Read committed（授权读取、读提交）："></a>Read committed（授权读取、读提交）：</h3><p>读取数据的事务允许其他事务继续访问该行数据，但是未提交的写事务将会禁止其他事务访问该行。<br>该隔离级别避免了脏读，但是却可能出现不可重复读。事务A事先读取了数据，事务B紧接了更新了数据，并提交了事务，而事务A再次读取该数据时，数据已经发生了改变。</p>
+<h3 id="Repeatable-read（可重复读取）："><a href="#Repeatable-read（可重复读取）：" class="headerlink" title="Repeatable read（可重复读取）："></a>Repeatable read（可重复读取）：</h3><p>读取数据的事务将会禁止写事务（但允许读事务），写事务则禁止任何其他事务。<br>避免了不可重复读取和脏读，但是有时可能出现幻读。这可以通过“共享读锁”和“排他写锁”实现。</p>
+<h3 id="Serializable（序列化）："><a href="#Serializable（序列化）：" class="headerlink" title="Serializable（序列化）："></a>Serializable（序列化）：</h3><p>提供严格的事务隔离。它要求事务序列化执行，事务只能一个接着一个地执行，但不能并发执行。如果仅仅通过“行级锁”是无法实现事务序列化的，必须通过其他机制保证新插入的数据不会被刚执行查询操作的事务访问到。<br>序列化是最高的事务隔离级别，同时代价也花费最高，性能很低，一般很少使用，在该级别下，事务顺序执行，不仅可以避免脏读、不可重复读，还避免了幻像读。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>隔离级别越高，越能保证数据的完整性和一致性，但是对并发性能的影响也越大。对于多数应用程序，可以优先考虑把数据库系统的隔离级别设为Read Committed。它能够避免脏读取，而且具有较好的并发性能。尽管它会导致不可重复读、幻读和第二类丢失更新这些并发问题，在可能出现这类问题的个别场合，可以由应用程序采用悲观锁或乐观锁来控制。</p>
+<p>大多数数据库的默认级别就是Read committed，比如Sql Server , Oracle。<br>MySQL的默认隔离级别就是Repeatable read。</p>
 
       
     </div>
@@ -388,7 +403,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/计划/" rel="tag">#计划</a>
+            <a href="/tags/数据库/" rel="tag">#数据库</a>
+          
+            <a href="/tags/事务/" rel="tag">#事务</a>
+          
+            <a href="/tags/隔离/" rel="tag">#隔离</a>
           
         </div>
       
@@ -397,17 +416,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/09/24/常见排序算法总结/" rel="next" title="常见排序算法总结">
-                <i class="fa fa-chevron-left"></i> 常见排序算法总结
+              <a href="/2017/03/09/JDK中的设计模式/" rel="next" title="JDK中的设计模式">
+                <i class="fa fa-chevron-left"></i> JDK中的设计模式
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/03/08/JVM内存结构/" rel="prev" title="JVM内存结构">
-                JVM内存结构 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -422,10 +437,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2017/01/01/2017展望/"
-     data-title="2017新年展望"
+        <div class="ds-share flat" data-thread-key="2017/03/11/数据库事务四种隔离级别/"
+     data-title="数据库事务四种隔离级别"
      data-content=""
-     data-url="http://yoursite.com/2017/01/01/2017展望/">
+     data-url="http://yoursite.com/2017/03/11/数据库事务四种隔离级别/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -452,8 +467,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/01/01/2017展望/"
-           data-title="2017新年展望" data-url="http://yoursite.com/2017/01/01/2017展望/">
+      <div class="ds-thread" data-thread-key="2017/03/11/数据库事务四种隔离级别/"
+           data-title="数据库事务四种隔离级别" data-url="http://yoursite.com/2017/03/11/数据库事务四种隔离级别/">
       </div>
     
   </div>
@@ -591,7 +606,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#定义"><span class="nav-number">1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#异常情况"><span class="nav-number">2.</span> <span class="nav-text">异常情况</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#更新丢失"><span class="nav-number">2.1.</span> <span class="nav-text">更新丢失</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#脏读"><span class="nav-number">2.2.</span> <span class="nav-text">脏读</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#不可重复读（Non-repeatable-Reads）：一个事务对同一行数据重复读取两次，但是却得到了不同的结果。"><span class="nav-number">2.3.</span> <span class="nav-text">不可重复读（Non-repeatable Reads）：一个事务对同一行数据重复读取两次，但是却得到了不同的结果。</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#隔离级别"><span class="nav-number">3.</span> <span class="nav-text">隔离级别</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Read-uncommitted-未授权读取、读未提交-："><span class="nav-number">3.1.</span> <span class="nav-text">Read uncommitted(未授权读取、读未提交)：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Read-committed（授权读取、读提交）："><span class="nav-number">3.2.</span> <span class="nav-text">Read committed（授权读取、读提交）：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Repeatable-read（可重复读取）："><span class="nav-number">3.3.</span> <span class="nav-text">Repeatable read（可重复读取）：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Serializable（序列化）："><span class="nav-number">3.4.</span> <span class="nav-text">Serializable（序列化）：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
           </div>
         </section>
