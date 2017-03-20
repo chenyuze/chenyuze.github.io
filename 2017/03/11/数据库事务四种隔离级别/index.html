@@ -84,19 +84,16 @@
 
 
 
-<meta name="description" content="定义在数据库操作中，为了有效保证并发读取数据的正确性，提出的事务隔离级别。数据库事务的隔离级别有4个，由低到高依次为Read uncommitted(未授权读取、读未提交)、Read committed（授权读取、读提交）、Repeatable read（可重复读取）、Serializable（序列化），这四个级别可以逐个解决脏读、不可重复读、幻读这几类问题。
-之所以提出事务隔离级别，是因为在一个">
+<meta name="description" content="定义在数据库操作中，为了有效保证并发读取数据的正确性，提出的事务隔离级别。数据库事务的隔离级别有4个，由低到高依次为Read uncommitted(未授权读取、读未提交)、Read committed（授权读取、读提交）、Repeatable read（可重复读取）、Serializable（序列化），这四个级别可以逐个解决脏读、不可重复读、幻读这几类问题。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据库事务四种隔离级别">
 <meta property="og:url" content="http://yoursite.com/2017/03/11/数据库事务四种隔离级别/index.html">
 <meta property="og:site_name" content="Chenyuze's Blog">
-<meta property="og:description" content="定义在数据库操作中，为了有效保证并发读取数据的正确性，提出的事务隔离级别。数据库事务的隔离级别有4个，由低到高依次为Read uncommitted(未授权读取、读未提交)、Read committed（授权读取、读提交）、Repeatable read（可重复读取）、Serializable（序列化），这四个级别可以逐个解决脏读、不可重复读、幻读这几类问题。
-之所以提出事务隔离级别，是因为在一个">
-<meta property="og:updated_time" content="2017-03-11T15:13:05.900Z">
+<meta property="og:description" content="定义在数据库操作中，为了有效保证并发读取数据的正确性，提出的事务隔离级别。数据库事务的隔离级别有4个，由低到高依次为Read uncommitted(未授权读取、读未提交)、Read committed（授权读取、读提交）、Repeatable read（可重复读取）、Serializable（序列化），这四个级别可以逐个解决脏读、不可重复读、幻读这几类问题。">
+<meta property="og:updated_time" content="2017-03-20T12:35:34.098Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据库事务四种隔离级别">
-<meta name="twitter:description" content="定义在数据库操作中，为了有效保证并发读取数据的正确性，提出的事务隔离级别。数据库事务的隔离级别有4个，由低到高依次为Read uncommitted(未授权读取、读未提交)、Read committed（授权读取、读提交）、Repeatable read（可重复读取）、Serializable（序列化），这四个级别可以逐个解决脏读、不可重复读、幻读这几类问题。
-之所以提出事务隔离级别，是因为在一个">
+<meta name="twitter:description" content="定义在数据库操作中，为了有效保证并发读取数据的正确性，提出的事务隔离级别。数据库事务的隔离级别有4个，由低到高依次为Read uncommitted(未授权读取、读未提交)、Read committed（授权读取、读提交）、Repeatable read（可重复读取）、Serializable（序列化），这四个级别可以逐个解决脏读、不可重复读、幻读这几类问题。">
 
 
 
@@ -365,7 +362,7 @@
       
 
       
-        <h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>在数据库操作中，为了有效保证并发读取数据的正确性，提出的事务隔离级别。<br>数据库事务的隔离级别有4个，由低到高依次为Read uncommitted(未授权读取、读未提交)、Read committed（授权读取、读提交）、Repeatable read（可重复读取）、Serializable（序列化），这四个级别可以逐个解决脏读、不可重复读、幻读这几类问题。</p>
+        <h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>在数据库操作中，为了有效保证并发读取数据的正确性，提出的事务隔离级别。<br>数据库事务的隔离级别有4个，由低到高依次为Read uncommitted(未授权读取、读未提交)、Read committed（授权读取、读提交）、Repeatable read（可重复读取）、Serializable（序列化），这四个级别可以逐个解决脏读、不可重复读、幻读这几类问题。<br><a id="more"></a></p>
 <p>之所以提出事务隔离级别，是因为在一个事务执行过程中，可能会出现以下几种情况</p>
 <h2 id="异常情况"><a href="#异常情况" class="headerlink" title="异常情况"></a>异常情况</h2><h3 id="更新丢失"><a href="#更新丢失" class="headerlink" title="更新丢失"></a>更新丢失</h3><p>两个事务都同时更新一行数据，一个事务对数据的更新把另一个事务对数据的更新覆盖了。这是因为系统没有执行任何的锁操作，因此并发事务并没有被隔离开来。</p>
 <h3 id="脏读"><a href="#脏读" class="headerlink" title="脏读"></a>脏读</h3><p>一个事务读取到了另一个事务未提交的数据操作结果。</p>
