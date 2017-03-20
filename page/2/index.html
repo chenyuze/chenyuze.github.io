@@ -741,10 +741,18 @@
 
       
         
-          
-          懒汉式，线程不安全1234567891011121314151617181920212223242526272829	public class Singleton &#123;	    private static Singleton instance;	    private Singleton 
-          ...
+          <h3 id="懒汉式，线程不安全"><a href="#懒汉式，线程不安全" class="headerlink" title="懒汉式，线程不安全"></a>懒汉式，线程不安全</h3><pre><code>public class Singleton {
+    private static Singleton instance;
+    private Singleton (){}
 
+    public static Singleton getInstance() {
+     if (instance == null) {
+         instance = new Singleton();
+     }
+     return instance;
+    }
+}
+</code></pre>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/09/10/单例模式/#more" rel="contents">
               阅读全文 &raquo;
